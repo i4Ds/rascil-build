@@ -20,7 +20,7 @@ jobs:
       - name: Upload PyBDSF Wheel
         uses: actions/upload-artifact@v2
         with:
-          name: PyBDSF Wheel ${{ runner.os }}
+          name: PyBDSF_Wheel_${{ runner.os }}
           path: |
             ${{ github.workspace }}/bdsf/dist/*.whl
   test:
@@ -31,4 +31,5 @@ jobs:
         uses: actions/download-artifact@v2
       - name:
         run: |
-          ls
+          cd PyBDSF_Wheel_Linux
+          pip3 install *.whl
