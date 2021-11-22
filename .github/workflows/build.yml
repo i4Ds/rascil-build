@@ -22,4 +22,4 @@ jobs:
         with:
           name: PyBDSF Wheel ${{ runner.os }}
           path: |
-            dist/*.whl
+            bdsf/dist/*.whl
