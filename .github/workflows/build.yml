@@ -17,8 +17,8 @@ jobs:
           chmod +x build.sh
           ./build.sh
       - name: Upload PyBDSF Wheel
-        uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
           name: PyBDSF Wheel ${{ runner.os }}
           path: |
-            dist/bdsf-1.9.2-cp38-cp38-linux_x86_64.whl
+            dist/*.whl
