@@ -17,8 +17,8 @@ jobs:
           chmod +x build.sh
           ./build.sh
       - name: Upload PyBDSF Wheel
-      - uses: actions/upload-artifact@v2
-      - with:
-        name: PyBDSF Wheel ${{ runner.os }}
-        path: |
-          bdsf*.whl
+        uses: actions/upload-artifact@v2
+        with:
+          name: PyBDSF Wheel ${{ runner.os }}
+          path: |
+            bdsf*.whl
