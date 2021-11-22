@@ -23,3 +23,11 @@ jobs:
           name: PyBDSF Wheel ${{ runner.os }}
           path: |
             ${{ github.workspace }}/bdsf/dist
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download wheel
+        uses: actions/download-artifact@v2
+      - name:
+        run: |
+          pip3 install bdsf*.whl
