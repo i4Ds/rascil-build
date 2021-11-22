@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-BDSF_DIR=$HOME/bsdf 
+BDSF_DIR=$HOME/bdsf 
 
 apt-get update
 apt-get install -y libboost-python-dev gfortran build-essential git libboost-numpy-dev python-setuptools python3 python3-pip
