@@ -1,4 +1,12 @@
 #!/bin/sh
 set -e
 
-pip3 install --user --index-url=https://artefact.skao.int/repository/pypi-all/simple rascil
+BDSF_DIR=$HOME/bsdf 
+
+apt-get update
+apt-get install -y libboost-python-dev gfortran build-essential git libboost-numpy-dev python-setuptools
+
+mkdir $BDSF_DIR
+git clone https://github.com/lofar-astron/PyBDSF.git $BDSF_DIR
+cd $BDSF_DIR
+python3 setup.py bdist_wheel
