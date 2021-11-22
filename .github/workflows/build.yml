@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu
     steps:
-      - uses: actions/checkout@v2
       - name: Install Rascil
+        uses: actions/checkout@v2
         run: |
           chmod +x build.sh
           ./build.sh
       - name: Upload PyBDSF Wheel
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: PyBDSF Wheel ${{ runner.os }}
           path: |
