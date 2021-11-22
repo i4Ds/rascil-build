@@ -12,3 +12,4 @@ mkdir $BDSF_DIR
 git clone https://github.com/lofar-astron/PyBDSF.git $BDSF_DIR
 cd $BDSF_DIR
 python3 setup.py bdist_wheel
+ls
