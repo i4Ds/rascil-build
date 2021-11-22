@@ -4,7 +4,9 @@ set -e
 BDSF_DIR=$HOME/bsdf 
 
 apt-get update
-apt-get install -y libboost-python-dev gfortran build-essential git libboost-numpy-dev python-setuptools
+apt-get install -y libboost-python-dev gfortran build-essential git libboost-numpy-dev python-setuptools python3 python3-pip
+
+pip3 install setuptools
 
 mkdir $BDSF_DIR
 git clone https://github.com/lofar-astron/PyBDSF.git $BDSF_DIR
