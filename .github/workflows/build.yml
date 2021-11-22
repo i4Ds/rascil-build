@@ -25,6 +25,7 @@ jobs:
             ${{ github.workspace }}/bdsf/dist
   test:
     runs-on: ubuntu-latest
+    depends-on: build
     steps:
       - name: download wheel
         uses: actions/download-artifact@v2
