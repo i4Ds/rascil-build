@@ -31,4 +31,4 @@ jobs:
         uses: actions/download-artifact@v2
       - name:
         run: |
-          pip3 install .
+          ls
