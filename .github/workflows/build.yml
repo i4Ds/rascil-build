@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu
     steps:
-      - name: Install Rascil
+      - name: checkout
         uses: actions/checkout@v2
+      - name: Install Rascil
         run: |
           chmod +x build.sh
           ./build.sh
