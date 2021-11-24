@@ -34,5 +34,6 @@ jobs:
       - name:
         run: |
           pip3 install PyBDSF_Wheel_Linux/*.whl
+          pip3 install matplotlib
           pip3 list
           python3 test.py
