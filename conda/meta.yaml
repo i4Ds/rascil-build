@@ -1,0 +1,66 @@
+{% set name = "rascil" %}
+{% set version = "0.5.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  noarch: python
+  number: 0
+
+requirements:
+  build:
+    - python
+    - pip
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - aotools=1.0.5
+    - astropy=5.0
+    - astroplan=0.8
+    - bdsf=1.9.2
+    - bokeh=2.4.2
+    - configparser=5.2.0
+    - dask=2022.01.0
+    - dask-memusage=1.1
+    - distributed=2022.1.0
+    - ducc0=0.22.0
+    - gitpython=3.1.26
+    - python-graphviz=0.19.1
+    - h5py=3.6.0
+    - jupyter=1.0.0
+    - jupyter_contrib_nbextensions=0.5.1
+    - matplotlib=3.5.1
+    - numpy=1.21.5
+    - pandas=1.4.0
+    - paramiko=2.9.2
+    - photutils=1.3.0
+    - python-casacore=3.4.0
+    - python-gitlab=3.1.0
+    - reproject=0.8
+    - scipy=1.7.3
+    - tabulate=0.8.9
+    - xarray=0.20.2
+    - zarr=2.10.3
+
+test:
+  imports:
+    - rascil
+
+about:
+  home: https://gitlab.com/ska-telescope/external/rascil.git
+  license: APACHE
+  license_family: APACHE
+  license_file: LICENSE
+  summary: 'Radio Astronomy Simulation, Calibration and Imaging Library'
+  description: |
+   The Radio Astronomy Simulation, Calibration and Imaging Library expresses radio interferometry calibration and imaging algorithms in python and numpy. The interfaces all operate with familiar data structures such as image, visibility table, gain table, etc. The python source code is directly accessible from these documentation pages: see the source link in the top right corner.
+  doc_url: https://ska-telescope.gitlab.io/external/rascil/index.html
+  dev_url: https://gitlab.com/ska-telescope/external/rascil.git
+
+extra:
+  recipe-maintainers:
+    - Christoph Vögele
