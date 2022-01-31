@@ -16,6 +16,7 @@ requirements:
     - python
     - pip
   run:
+    - sysroot_linx-64=2.17
     - python
     - aotools
     - astropy
