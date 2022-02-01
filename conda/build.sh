@@ -1,1 +1,1 @@
-$PYTHON -m pip install --no-deps --index-url=https://artefact.skao.int/repository/pypi-all/simple rascil
+$PYTHON -m pip install . --no-deps
