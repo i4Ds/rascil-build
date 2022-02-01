@@ -16,6 +16,8 @@ requirements:
   build:
     - python {{ python }}
     - pip
+    - git-lfs
+    - git
   host:
     - python {{ python }}
     - pip
