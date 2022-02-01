@@ -18,6 +18,7 @@ jobs:
         run: |
           conda install conda-build anaconda
           conda install mamba -n base -c conda-forge
+          conda install boa -c conda-forge
           conda config --append channels conda-forge
           conda config --append channels i4ds
       - name: Checkout repository
