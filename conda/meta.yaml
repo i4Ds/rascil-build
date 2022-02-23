@@ -10,7 +10,6 @@ package:
 #  git_rev: {{ version }}
 
 build:
-  noarch: python
   number: 0
 
 requirements:
