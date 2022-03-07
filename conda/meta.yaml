@@ -50,8 +50,8 @@ requirements:
    - zarr
 
 test:
-  #imports:
-  #  - rascil
+  imports:
+    - rascil
 
 about:
   home: https://gitlab.com/ska-telescope/external/rascil.git
