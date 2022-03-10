@@ -48,6 +48,7 @@ requirements:
    - tabulate
    - xarray
    - zarr
+   - curl
 
 test:
   imports:
