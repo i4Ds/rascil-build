@@ -15,16 +15,19 @@ jobs:
         with:
           auto-update-conda: true
       - name: Install conda build
+        shell: bash -l {0}
         run: |
-          conda install conda-build anaconda
-          conda install mamba -n base -c conda-forge
-          conda install boa -c conda-forge
+          conda create -n build_env 
+          conda activate build_env
+          conda install -c conda-forge anaconda boa
           conda config --append channels conda-forge
           conda config --append channels i4ds
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Build Conda
+        shell: bash -l {0}
         run: |
+          conda activate build_env
           cd conda
           conda mambabuild .
       - name: Publish to Conda
