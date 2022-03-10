@@ -37,7 +37,7 @@ requirements:
    - python-graphviz
    - h5py
    - matplotlib
-   - numpy>=1.17
+   - numpy
    - pandas
    - paramiko
    - photutils
@@ -48,7 +48,6 @@ requirements:
    - tabulate
    - xarray
    - zarr
-   - curl
 
 test:
   imports:
