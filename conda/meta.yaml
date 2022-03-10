@@ -37,7 +37,7 @@ requirements:
    - python-graphviz
    - h5py
    - matplotlib
-   - numpy
+   - numpy>=1.17
    - pandas
    - paramiko
    - photutils
