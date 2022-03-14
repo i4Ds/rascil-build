@@ -9,19 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
+    container: ghcr.io/i4ds/mambabuild-docker:latest
     steps:
-      - name: Install Conda
-        uses: conda-incubator/setup-miniconda@v2
-        with:
-          auto-update-conda: true
-      - name: Install conda build
-        shell: bash -l {0}
-        run: |
-          conda create -n build_env 
-          conda activate build_env
-          conda install -c conda-forge anaconda boa
-          conda config --append channels conda-forge
-          conda config --append channels i4ds
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Build Conda
@@ -29,7 +18,7 @@ jobs:
         run: |
           conda activate build_env
           cd conda
-          conda mambabuild .
+          conda mambabuild -c i4ds -c conda-forge .
       - name: Publish to Conda
         shell: bash -l {0}
         run: |
