@@ -31,6 +31,9 @@ jobs:
     runs-on: ubuntu-20.04
     container: ghcr.io/i4ds/mambabuild-docker:latest
     steps:
+      - name: Install Curl
+        run: | 
+         apt-get install curl
       - name: Install Package
         shell: bash -l {0}
         run: |
