@@ -16,7 +16,6 @@ jobs:
       - name: Build Conda
         shell: bash -l {0}
         run: |
-          conda activate build_env
           cd conda
           conda mambabuild -c i4ds -c conda-forge .
       - name: Publish to Conda
