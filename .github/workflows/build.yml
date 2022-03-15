@@ -33,7 +33,8 @@ jobs:
     steps:
       - name: Install Curl
         run: | 
-         apt-get install curl
+          apt-get update
+          apt-get install curl
       - name: Install Package
         shell: bash -l {0}
         run: |
