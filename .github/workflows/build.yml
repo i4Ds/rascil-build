@@ -21,5 +21,4 @@ jobs:
       - name: Publish to Conda
         shell: bash -l {0}
         run: |
-          conda activate build_env
-          anaconda -t ${{ secrets.ANACONDA_SECRET }} upload /usr/share/miniconda/conda-bld/linux-64/rascil-*.tar.bz2 --force
+          anaconda -t ${{ secrets.ANACONDA_SECRET }} upload /opt/conda/conda-bld/linux-64/rascil-*.tar.bz2 --force
