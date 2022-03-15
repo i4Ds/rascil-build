@@ -34,7 +34,7 @@ jobs:
       - name: Install Curl
         run: | 
           apt-get update
-          apt-get install curl
+          apt-get install -y curl
       - name: Install Package
         shell: bash -l {0}
         run: |
