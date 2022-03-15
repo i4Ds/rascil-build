@@ -21,4 +21,5 @@ jobs:
       - name: Publish to Conda
         shell: bash -l {0}
         run: |
+          conda activate base
           anaconda -t ${{ secrets.ANACONDA_SECRET }} upload /opt/conda/conda-bld/linux-64/rascil-*.tar.bz2 --force
