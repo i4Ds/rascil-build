@@ -15,15 +15,15 @@ build:
 
 requirements:
   build:
-    - python {{ python }}
+    - python
     - pip
     - git-lfs
     - git
   host:
-    - python {{ python }}
+    - python
     - pip
   run:
-   - python {{ python }}
+   - python
    - aotools
    - astropy
    - astroplan
