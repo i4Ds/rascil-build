@@ -1,11 +1,6 @@
-#cmd=curl
-#[[ $(type -P "$cmd") ]] && echo "$cmd is in PATH"  ||
-#    { echo "$cmd is NOT in PATH" 1>&2; exit 1; }
-
-#cmd=wget
-#[[ $(type -P "$cmd") ]] && echo "$cmd is in PATH"  ||
-#    { echo "$cmd is NOT in PATH" 1>&2; exit 1; }
-
+cmd=curl
+[[ $(type -P "$cmd") ]] && echo "$cmd is in PATH"  ||
+    { echo "$cmd is not installed. Please install $cmd and try the installation again ex.: (conda install $cmd)" 1>&2; exit 1; }
 
 DATA_DIRECTORY="$PREFIX/rascil_data"
 echo $DATA_DIRECTORY
