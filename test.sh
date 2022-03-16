@@ -1,12 +1,11 @@
 CONDA_BASE=$(conda info --base)
-echo $CONDA_BASE
 source $CONDA_BASE/etc/profile.d/conda.sh
 
-conda create -y -n testpy37 python=3.7
-conda activate testpy37
-conda install -y -c i4ds -c conda-forge rascil
-python -c "import rascil"
-python -c "from rascil.apps import rascil_imager"
+#conda create -y -n testpy37 python=3.7
+#conda activate testpy37
+#conda install -y -c i4ds -c conda-forge rascil
+#python -c "import rascil"
+#python -c "from rascil.apps import rascil_imager"
 
 conda create -y -n testpy38 python=3.8
 conda activate testpy38
