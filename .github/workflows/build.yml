@@ -31,6 +31,8 @@ jobs:
     runs-on: ubuntu-20.04
     container: ghcr.io/i4ds/mambabuild-docker:latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
       - name: Install Curl
         run: | 
           apt-get update
@@ -39,21 +41,4 @@ jobs:
         shell: bash -l {0}
         run: |
           conda config --append channels conda-forge
-          
-          conda create -n testpy37 python=3.7
-          conda activate testpy37
-          conda install -c i4ds -c conda-forge rascil
-          python -c "import rascil" 
-          python -c "from rascil.apps import rascil_imager"
-          
-          conda create -n testpy38 python=3.8
-          conda activate testpy38
-          conda install -c i4ds -c conda-forge rascil
-          python -c "import rascil"
-          python -c "from rascil.apps import rascil_imager"
-          
-          conda create -n testpy39 python=3.9
-          conda activate testpy39
-          conda install -c i4ds -c conda-forge rascil
-          python -c "import rascil"
-          python -c "from rascil.apps import rascil_imager"
+          bash test.sh
