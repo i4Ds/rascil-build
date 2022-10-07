@@ -1,5 +1,5 @@
 {% set name = "rascil" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -68,4 +68,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - Christoph Vögele
+    - Lukas Gehrig
