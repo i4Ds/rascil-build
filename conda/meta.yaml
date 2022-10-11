@@ -1,9 +1,4 @@
 {% set name = "rascil" %}
-#{% set version = "0.7.dev0" %}
-
-#source:
-#  git_url: https://gitlab.com/ska-telescope/external/rascil
-#  git_rev: {{ version }}
 
 build:
   noarch: python
