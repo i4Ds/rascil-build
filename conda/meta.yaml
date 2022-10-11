@@ -9,11 +9,11 @@ build:
   noarch: python
   number: 0
   script_env:
-    - PKG_VERSION
+    - VERSION
 
 package:
   name: {{ name|lower }}
-  version: {{ PKG_VERSION }}
+  version: {{ VERSION }}
 
 requirements:
   build:
