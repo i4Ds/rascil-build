@@ -1,5 +1,8 @@
 name: Build Conda Package Rascil
 
+env:
+  PKG_VERSION: 0.7.dev0
+
 on:
   push:
     branches:
