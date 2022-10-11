@@ -1,17 +1,14 @@
 {% set name = "rascil" %}
-{% set version = "0.7.0" %}
-
-package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
-#source:
-#  git_url: https://gitlab.com/ska-telescope/external/rascil
-#  git_rev: {{ version }}
 
 build:
   noarch: python
   number: 0
+  script_env:
+    - VERSION
+
+package:
+  name: {{ name|lower }}
+  version: {{ VERSION }}
 
 requirements:
   build:
