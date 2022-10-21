@@ -2,6 +2,8 @@ name: Build Conda Package Rascil
 
 env:
   VERSION: 0.7.dev0
+  #LABEL: main
+  LABEL: dev
 
 on:
   push:
@@ -28,7 +30,7 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate base
-          anaconda -t ${{ secrets.ANACONDA_SECRET }} upload /opt/conda/conda-bld/noarch/rascil-*.tar.bz2 --force
+          anaconda -t ${{ secrets.ANACONDA_SECRET }} upload /opt/conda/conda-bld/noarch/rascil-*.tar.bz2 --label $LABEL
 
 
 
