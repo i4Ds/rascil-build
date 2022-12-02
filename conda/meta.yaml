@@ -25,7 +25,7 @@ requirements:
    - aotools
    - astropy
    - astroplan
-   - bdsf >=1.10
+   - pybdsf >=1.10
    - bokeh
    - configparser
    - dask
