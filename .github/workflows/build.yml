@@ -49,18 +49,21 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
+        run: |
+          conda update -n base conda
+          conda install -n base conda-libmamba-solver
       - name: Install Package
         shell: bash -l {0}
         run: |
           conda create -y -n testpy39 python=3.9
           conda activate testpy39
-          conda install -y -c "i4ds/label/$LABEL" -c i4ds -c conda-forge rascil="$VERSION"
+          conda install -y -c "i4ds/label/$LABEL" -c i4ds -c conda-forge rascil="$VERSION" --experimental-solver=libmamba
           python -c "import rascil"
           python -c "from rascil.apps import rascil_imager"
           
           conda create -y -n testpy310 python=3.10
           conda activate testpy310
-          conda install -y -c "i4ds/label/$LABEL" -c i4ds -c conda-forge rascil="$VERSION"
+          conda install -y -c "i4ds/label/$LABEL" -c i4ds -c conda-forge rascil="$VERSION" --experimental-solver=libmamba
           python -c "import rascil"
           python -c "from rascil.apps import rascil_imager"
           
