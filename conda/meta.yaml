@@ -25,7 +25,6 @@ requirements:
    - aotools
    - astropy
    - astroplan
-   - bdsf >=1.10
    - bokeh
    - configparser
    - dask
@@ -40,6 +39,7 @@ requirements:
    - pandas
    - paramiko
    - photutils
+   - pybdsf
    - python-casacore
    - python-gitlab
    - reproject
