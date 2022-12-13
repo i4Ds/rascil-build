@@ -23,7 +23,7 @@ requirements:
   run:
    - python
    - aotools
-   - astropy
+   - astropy <=5.1
    - astroplan
    - bokeh
    - configparser
