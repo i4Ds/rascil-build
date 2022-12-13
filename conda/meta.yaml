@@ -33,7 +33,7 @@ requirements:
    - ducc0
    - gitpython
    - python-graphviz
-   - h5py ==3.6
+   - h5py
    - matplotlib
    - numpy
    - pandas
