@@ -3,8 +3,7 @@ name: Build Conda Package Rascil
 env:
   #VERSION: 0.7.0
   VERSION: 0.7.dev0
-  LABEL: main
-  #LABEL: dev
+  LABEL: dev
 
 on:
   push:
