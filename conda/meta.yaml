@@ -23,7 +23,7 @@ requirements:
   run:
    - python
    - aotools
-   - astropy <=5.1
+   - astropy <5.2
    - astroplan
    - bokeh
    - configparser
@@ -48,7 +48,7 @@ requirements:
    - tabulate
    - xarray
    - zarr
-   - ska-sdp-func
+   - ska-sdp-func ==0.0.3
 
 test:
   imports:
